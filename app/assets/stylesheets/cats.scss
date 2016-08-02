@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-image: image-path("tacky.jpg");
+  background-image: url(asset-path('tacky.jpg'));
 }
 
 h1 {
@@ -14,11 +14,20 @@ h1 {
   font-family: 'Lobster', cursive;
 }
 label {display:block;clear:both;}
+label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  padding: 15px;
+}
+
 
 input[type=text] {
   display: block;
   margin: 0;
-  width: 100%;
+  width: 65%;
+  height: 40px;
+  border-color: #333;
+  border-width: 5px;
   font-family: sans-serif;
   font-size: 18px;
   appearance: none;
@@ -35,7 +44,8 @@ input[type="text"]:focus {
 
 
 textarea {
+  width: 50%;
   -webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }

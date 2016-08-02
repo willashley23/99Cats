@@ -4,6 +4,8 @@ class Cat < ActiveRecord::Base
   validates :birth_date, :color, :name, :sex, :description, presence: true
   validates :color, inclusion: { in: COLORS, message: "No other colors allowed!!!" }
   validates :sex, inclusion:{ in: %w(M F), message: "Sorry, no gender binaries."}
+  has_many :cat_rental_requests, :dependent => :destroy
+
   def age
     require 'date'
     d = Date.new(2016, 8, 2)
