@@ -7,7 +7,11 @@ class CatsController < ApplicationController
     @cat = Cat.find_by_id(params[:id])
   end
 
+  def new
+    @cat = Cat.new
+  end
 
 
-  
+
+
 end
