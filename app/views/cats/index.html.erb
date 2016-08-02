@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+        <% @cats.each do |kitty| %>
+          <ul>
+            <li>
+              <ul>
+                <li><%= link_to(kitty.name, cat_url(kitty)) %></li>
+                <li><%= kitty.birth_date %></li>
+                <li><%= kitty.color %></li>
+                <li><%= kitty.sex %></li>
+                <li><%= kitty.description %></li>
+              </ul>
+            </li>
+          </ul>
+        <% end %>
+
+  </body>
+</html>
