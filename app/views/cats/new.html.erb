@@ -1,6 +1,6 @@
 
 <h1>Submit A Cat</h1>
-<form action= "<%= cats_url %>" method="POST">
+<!-- <form action= "<%= cats_url %>" method="POST">
   <label for="Name">
     Name:
     <input type="text" name="cat[name]">
@@ -28,4 +28,6 @@
     <textarea name="cat[description]" rows="8" cols="40">desribe your cat</textarea>
   </label>
   <input type="submit" value="Submit your cat">
-</form>
+</form> -->
+
+<%= render "./layouts/form" %>

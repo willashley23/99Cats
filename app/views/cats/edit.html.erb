@@ -1,31 +1,3 @@
-<h1>Edit A Cat</h1>
-<form action= "<%= cat_url %>" method="POST">
-  <input type="hidden" name="_method" value="PATCH">
-  <label for="Name">
-    Name:
-    <input type="text" name="cat[name]" value=" <%= @cat.name %>">
-  </label>
-  <label for="Sex">
-    M
-    <input type="radio" name="cat[sex]" value="M" <%= @cat.sex == "M" ? "checked" : "false" %>>
-    F
-    <input type="radio" name="cat[sex]" value="F" <%= @cat.sex == "F" ? "checked" : "false" %>>
-  </label>
-  <label for="Color">
-    Color:
-    <select name="cat[color]">
-      <option value="" >Option</options>
-      <option value="Red"<%= @cat.color == "Red" ? "selected" : "false" %>>Red</options>
-      <option value="Yellow" <%= @cat.color == "Yellow" ? "selected" : "false" %>>Yellow</options>
-      <option value="Blue" <%= @cat.color == "Blue" ? "selected" : "false" %>>Blue</options>
-      <option value="Green" <%= @cat.color == "Green" ? "selected" : "false" %>>Green</options>
-    </select>
-  </label>
-  <label for="date">Birth date:
-    <input type='date' name='cat[birth_date]' value="<%= @cat.birth_date.to_s %>">
-  </label>
-  <label>
-    <textarea name="cat[description]" rows="8" cols="40"><%= @cat.description %></textarea>
-  </label>
-  <input type="submit" value="Submit your cat">
-</form>
+<h1>Edit <%= @cat.name %></h1>
+
+<%= render "./layouts/form" %>
