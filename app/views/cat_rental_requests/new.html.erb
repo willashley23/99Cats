@@ -1,0 +1,11 @@
+<h1>Submit A Rental Request</h1>
+
+<form action = "<%= cat_rental_requests_url %>" method: "POST">
+  <label for"DropDownMenu">
+    Name:<select name="cat_rental_request[cat_id]">
+      <option value="">Select</options>
+       <%  @cats.each do |cat| %>
+          <option value=<%= cat.id %>><%= cat.name %></options>
+        <% end %>
+    </select>
+  </label>
