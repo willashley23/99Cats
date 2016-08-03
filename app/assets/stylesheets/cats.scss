@@ -1,7 +1,3 @@
-// Place all the styles related to the Cats controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 body {
   background-image: url(asset-path('tacky.jpg'));
 }
@@ -13,14 +9,19 @@ h1 {
   text-align: center;
   font-family: 'Lobster', cursive;
 }
+
 label {display:block;clear:both;}
+
 label {
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
   padding: 15px;
 }
 
-
+.rental_label {
+  font-size: 25px;
+  padding: 10px;
+}
 
 input[type=text] {
   display: inline;

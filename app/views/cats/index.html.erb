@@ -15,6 +15,8 @@
                 <li><%= kitty.color %></li>
                 <li><%= kitty.sex %></li>
                 <li><%= kitty.description %></li>
+                <li><%= kitty.cat_rental_requests.pluck(:start_date) %></li>
+                <li><%= kitty.cat_rental_requests.pluck(:end_date) %></li>
               </ul>
             </li>
           </ul>

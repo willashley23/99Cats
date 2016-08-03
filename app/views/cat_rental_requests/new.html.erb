@@ -1,11 +1,19 @@
-<h1>Submit A Rental Request</h1>
+<h1 id="rental_heading">Submit A Rental Request</h1>
 
-<form action = "<%= cat_rental_requests_url %>" method: "POST">
-  <label for"DropDownMenu">
-    Name:<select name="cat_rental_request[cat_id]">
+<form action = "/cat_rental_requests" method="POST">
+  <label for"DropDownMenu" class="rental_label" id="name">
+    Name:  <select name="cat_rental_request[cat_id]">
       <option value="">Select</options>
        <%  @cats.each do |cat| %>
           <option value=<%= cat.id %>><%= cat.name %></options>
         <% end %>
     </select>
   </label>
+
+  <label for="date" class="rental_label">Select Desired Dates:
+    <br>
+    Start: <input type="date" name="cat_rental_request[start_date]">
+    End: <input type="date" name="cat_rental_request[end_date]">
+  </label>
+<input type="submit" value="Submit Request">
+</form>
