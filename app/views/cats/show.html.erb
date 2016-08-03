@@ -12,12 +12,16 @@
         <th>Sex</th>
         <th>Color</th>
         <th>Description</th>
+        <th>Start Date</th>
+        <th>End Date</th>
       </tr>
       <tr>
         <td><%= @cat.birth_date %></td>
         <td><%= @cat.sex %></td>
         <td><%= @cat.color %></td>
         <td><%= @cat.description %></td>
+        <td><%= @cat.cat_rental_requests.pluck(:start_date)[0] %></td>
+        <td><%= @cat.cat_rental_requests.pluck(:end_date)[0] %></td>
       </tr>
     </table>
   </body>
