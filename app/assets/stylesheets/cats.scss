@@ -1,11 +1,13 @@
 body {
-  background-image: url(asset-path('tacky.jpg'));
+  background-image: url(asset-path('catpattern3.jpg'));
+  background-repeat: none;
+  background-size: cover;
 }
 
 h1 {
   padding: 20px;
   font-size: 80px;
-  color: #333;
+  color: #eae7e3;
   text-align: center;
   font-family: 'Lobster', cursive;
 }
