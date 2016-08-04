@@ -12,16 +12,16 @@
 <body>
 
 <nav class="main-nav">
-<h1><%= link_to "99 Cats", cats_url %></h1>
 <div>
 <% if current_user.nil? %>
-  <%= link_to "Sign in", new_session_url %>
-  <%= link_to "Sign up", new_user_url %>
+  <p class="header_p"><%= link_to "Sign in", new_session_url %></p>
+   <p class="header_p"><%= link_to "Sign up", new_user_url %></p>
 <% else %>
-  <%= current_user.username %>
+  <h3 class="hederH3">Hello, <%= current_user.username %></h3>
   <%= button_to "Logout", session_url, method: :delete %>
 <% end %>
 </div>
+<p class="header_p"><%= link_to("Share your cat", new_cat_url) %></p>
 </nav>
 
 <%= yield %>

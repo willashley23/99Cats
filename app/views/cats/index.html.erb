@@ -5,19 +5,21 @@
     <title></title>
   </head>
   <body>
-    <%= link_to("Make a new cat", new_cat_url) %>
+  <h1>99Cats</h1>
         <% @cats.each do |kitty| %>
-          <ul>
+          <ul class="indexUL">
             <li>
-              <ul>
-                <li><%= link_to(kitty.name, cat_url(kitty)) %></li>
-                <li><%= kitty.birth_date %></li>
-                <li><%= kitty.color %></li>
-                <li><%= kitty.sex %></li>
-                <li><%= kitty.description %></li>
-                <li><%= kitty.cat_rental_requests.pluck(:start_date) %></li>
-                <li><%= kitty.cat_rental_requests.pluck(:end_date) %></li>
-              </ul>
+              
+                <li>Name: <%= link_to(kitty.name, cat_url(kitty)) %></li>
+                <li>DOB: <%= kitty.birth_date %></li>
+                <li>Fur Color: <%= kitty.color %></li>
+                <li>Sex: <%= kitty.sex %></li>
+                <li>About: <%= kitty.description %></li>
+                <% unless kitty.cat_rental_requests.pluck(:start_date).empty? %>
+                  <li>Rental Start Date: <%= kitty.cat_rental_requests.pluck(:start_date)[0] %></li>
+                  <li>Rental End Date: <%= kitty.cat_rental_requests.pluck(:end_date)[0] %></li>
+                <% end %>
+              
             </li>
           </ul>
         <% end %>
