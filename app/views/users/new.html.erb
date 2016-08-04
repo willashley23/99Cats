@@ -1,6 +1,8 @@
 <section class="page"><div class="centered-box">
     <h1>New User</h1>
 
+     <%= render "shared/errors" %>
+
     <form action="<%= users_url %>" method="post">
       <input
         type="hidden"

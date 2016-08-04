@@ -10,7 +10,12 @@ class CatsController < ApplicationController
   end
 
   def new
-    @cat = Cat.new
+    if logged_in?
+      @cat = Cat.new
+      render :new
+    else
+      redirect_to new_session_url
+    end
   end
 
   def create
