@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
   before_action :require_no_user!
 
   def create
@@ -20,6 +20,6 @@ class UserController < ApplicationController
   private
 
   def user_params
-    params.requre(:user).permit(:password, :username)
+    params.require(:user).permit(:password, :username)
   end
 end
