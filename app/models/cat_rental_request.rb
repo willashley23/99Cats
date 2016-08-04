@@ -3,6 +3,7 @@ class CatRentalRequest < ActiveRecord::Base
   validates :status, inclusion: { in: %w(PENDING APPROVED DENIED), message: "Invalid status" }
   validate :overlapping_approved_requests
   belongs_to :cat
+  belongs_to :user
 
 # Add a validation that no two APPROVED cat requests for the same cat can overlap in time.
   def overlapping_requests

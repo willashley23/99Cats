@@ -5,6 +5,7 @@ class Cat < ActiveRecord::Base
   validates :color, inclusion: { in: COLORS, message: "No other colors allowed!!!" }
   validates :sex, inclusion:{ in: %w(M F), message: "Sorry, no gender binaries."}
   has_many :cat_rental_requests, :dependent => :destroy
+  belongs_to :owner
 
   def age
     require 'date'
