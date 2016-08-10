@@ -1,5 +1,5 @@
 class Cat < ActiveRecord::Base
-  COLORS = %w(Red Blue Green Yellow)
+  COLORS = %w(Black Brown White Spotted)
 
   validates :birth_date, :color, :name, :sex, :description, presence: true
   validates :color, inclusion: { in: COLORS, message: "No other colors allowed!!!" }
